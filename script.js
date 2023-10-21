@@ -2,9 +2,7 @@ function copyPatternToSubject() {
   const patternInput = document.getElementById("patternNumber");
   const subjectInput = document.getElementById("subjectNumber");
 
-  if (subjectInput.value === "") {
-      subjectInput.value = patternInput.value;
-  }
+  subjectInput.value = patternInput.value;
 }
 
 function generateTable() {
