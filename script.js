@@ -19,13 +19,13 @@ function generateTable() {
 
   // 入力が不適切な場合、エラーメッセージを表示
   if (isNaN(patternN) || patternN <= 0 || isNaN(subjectN) || subjectN <= 0) {
-      alert("正の整数を入力してください");
-      return;
+    alert("正の整数を入力してください");
+    return;
   }
 
   if (subjectN % patternN !== 0) {
-      alert("被験者の人数はパターン数の整数でなければなりません");
-      return;
+    alert("被験者の人数はパターン数の整数でなければなりません");
+    return;
   }
 
   let table = document.createElement("table");
@@ -45,4 +45,4 @@ function generateTable() {
   let container = document.getElementById("tableContainer");
   container.innerHTML = "";
   container.appendChild(table);
-  }
+}
