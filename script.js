@@ -1,3 +1,11 @@
+function getPatternValue(value) {
+  if (document.getElementById("alphabet").checked) {
+    return String.fromCharCode(64 + value); // ASCIIの65はA
+  } else {
+    return value.toString();
+  }
+}
+
 function copyPatternToSubject() {
   const patternInput = document.getElementById("patternNumber");
   const subjectInput = document.getElementById("subjectNumber");
@@ -28,8 +36,9 @@ function generateTable() {
     let subjectCell = row.insertCell(0);
     subjectCell.innerText = "被験者" + (i + 1);
     for (let j = 0; j < patternN; j++) {
-        let cell = row.insertCell(j + 1);
-        cell.innerText = (j - (i % patternN) + patternN) % patternN + 1;
+      let cell = row.insertCell(j + 1);
+      let cellValue = getPatternValue((j - (i % patternN) + patternN) % patternN + 1);
+      cell.innerText = cellValue;
     }
   }
 

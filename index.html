@@ -9,11 +9,15 @@
 <body>
   <h2>ラテン方格法のテーブル生成</h2>
   <div>
-    <label for="patternNumber">パターン数:</label>
+    <label for="patternNumber">パターン数 : </label>
     <input type="number" id="patternNumber" oninput="copyPatternToSubject()">
-    <label for="subjectNumber">被験者の人数:</label>
+    <label for="subjectNumber">被験者の人数 : </label>
     <input type="number" id="subjectNumber">
     <button onclick="generateTable()">生成</button>
+    <br>
+    <label>表示方式 : </label>
+    <input type="radio" id="number" name="displayMode" value="number" checked> 数字
+    <input type="radio" id="alphabet" name="displayMode" value="alphabet"> アルファベット
   </div>
   <div id="tableContainer"></div>
 
